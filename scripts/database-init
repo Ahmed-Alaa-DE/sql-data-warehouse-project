@@ -1,0 +1,39 @@
+/*
+===========================
+create database and schemas 
+===========================
+script's pupose :
+				 1.creating a new database called "datawarehouse" through droping it if it exists before 
+				 2.creating bronze , silver , and gold schemas 
+
+warning! :
+		   running this script will drop the entire "data warehouse" database if it exists
+*/
+
+
+
+use master;
+go
+
+
+
+if exists (select 1 from sys.databases where name = 'datawarehouse')
+begin 
+	ALTER DATABASE datawarehouse set single_user with rollback immediate 
+	drop database datawarehouse;
+end;
+
+
+
+-- creating a database called "datawarehouse"
+create database datawarehouse;
+
+use datawarehouse;
+go
+
+create schema bronze;
+go 
+create schema silver;
+go
+create schema gold;
+go 
