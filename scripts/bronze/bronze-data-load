@@ -1,0 +1,24 @@
+/*==============================================================
+Script: Bronze Layer Data Load Procedure
+Object: bronze.load_bronze
+
+Description:
+This stored procedure loads raw data into the Bronze layer
+of the Data Warehouse from CRM and ERP CSV source files.
+
+Process:
+1. Truncate existing Bronze tables
+2. Bulk load data from CSV files
+3. Log load duration for each dataset
+4. Log total batch execution time
+5. Handle errors using TRY...CATCH
+
+Source Systems:
+- CRM
+- ERP
+
+Layer:
+Bronze (Raw Data Ingestion Layer)
+
+Author: Ahmed Alaa
+==============================================================*/
