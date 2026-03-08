@@ -3,7 +3,7 @@
 building a data warehouse with SQL Server , including ETL process , data modeling , and analysis.
 
 
-![Source Systems](docs/source systems.drawio.png)
+![Source Systems](docs/source_systems.drawio.png)
 This project integrates data from CRM and ERP source systems.
 
 
