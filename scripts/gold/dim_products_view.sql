@@ -1,3 +1,11 @@
+-- =============================================
+-- View Name: gold.dim_products
+-- Description:
+-- This view contains product information.
+-- It includes product details, categories, and pricing data.
+-- Only active products are included (no end date).
+-- =============================================
+
 CREATE VIEW gold.dim_products AS
 SELECT 
        row_number() over(order by pn.[prd_start_dt] , pn.prd_key) AS product_KEY
