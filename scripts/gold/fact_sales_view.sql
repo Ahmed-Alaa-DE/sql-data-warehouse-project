@@ -1,3 +1,13 @@
+-- =============================================
+-- View Name: gold.fact_sales
+-- Description: 
+-- This view contains the main sales transactions.
+-- It combines sales data with product and customer dimensions.
+-- Each row represents a single sales order with related details.
+-- =============================================
+
+
+
 CREATE VIEW gold.fact_sales AS  
 SELECT 
        [sls_ord_num]     AS order_number
