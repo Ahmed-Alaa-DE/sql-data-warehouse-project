@@ -1,4 +1,19 @@
-
+-- =============================================
+-- Object: Silver Table
+-- Layer: Silver
+-- Description:
+-- This table stores data after cleaning and transformation
+-- from the bronze layer.
+--
+-- Data in this layer is:
+-- - Cleaned (removed nulls, fixed formats)
+-- - Standardized (consistent values like gender, country)
+-- - Deduplicated (no repeated records)
+--
+-- Purpose:
+-- To prepare reliable and structured data
+-- for building analytical models in the gold layer.
+-- =============================================
 
 
 
