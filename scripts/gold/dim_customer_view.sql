@@ -1,3 +1,11 @@
+-- =============================================
+-- View Name: gold.dim_customer
+-- Description:
+-- This view contains customer information.
+-- It merges data from CRM and ERP systems.
+-- Each row represents one customer with personal and demographic details.
+-- =============================================
+
 create view gold.dim_customer as
 SELECT 
 ROW_NUMBER() OVER(ORDER BY ci.[cst_id]) AS customer_key,
