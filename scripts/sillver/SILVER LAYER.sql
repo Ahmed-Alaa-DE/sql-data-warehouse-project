@@ -1,3 +1,22 @@
+-- =============================================
+-- Object: ETL Procedure
+-- Layer: Silver
+-- Description:
+-- This procedure loads data from the bronze layer
+-- into the silver layer.
+--
+-- It performs the following steps:
+-- - Data cleaning (handling nulls, invalid values)
+-- - Data transformation (formatting, mapping values)
+-- - Data validation (ensuring data consistency)
+-- - Full reload using truncate and insert
+--
+-- Purpose:
+-- To ensure high-quality data is available
+-- for downstream reporting and analytics.
+-- =============================================
+
+
 USE datawarehouse
 GO
 
