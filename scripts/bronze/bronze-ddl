@@ -22,111 +22,104 @@ use datawarehouse;
 
 
 
--- ##############################################################
--- 📂 STARTING SCHEMA: SOURCE_CRM 
--- ##############################################################
 
--- ==============================================
--- DDL for Table: bronze.source_crm.prd_info
--- ==============================================
-IF OBJECT_ID('bronze.source_crm.prd_info', 'U') IS NOT NULL
-    DROP TABLE bronze.source_crm.prd_info;
-GO
-
-CREATE TABLE bronze.source_crm.prd_info (
-    prd_id NVARCHAR(500),
-    prd_key NVARCHAR(500),
-    prd_nm NVARCHAR(500),
-    prd_cost NVARCHAR(500),
-    prd_line NVARCHAR(500),
-    prd_start_dt NVARCHAR(500),
-    prd_end_dt NVARCHAR(500)
+  -- ################################
+-- starting schema : source_crm
+      -- ################################
+--=============================
+ddl for table : bronze.crm_prd_info
+--=============================
+if object_id('bronze.crm_prd_info','U') is not null
+    drop table bronze.crm_prd_info; 
+go
+create table bronze.crm_prd_info ( 
+     prd_id nvarchar(500),
+     prd_key nvarchar(500),
+     prd_nm nvarchar(500),
+     prd_cost nvarchar(500),
+     prd_line nvarchar(500),
+     prd_start_dt nvarchar(500),
+     prd_end_dt nvarchar(500)
 );
-GO
+go
 
--- ==============================================
--- DDL for Table: bronze.source_crm.cust_info
--- ==============================================
-IF OBJECT_ID('bronze.source_crm.cust_info', 'U') IS NOT NULL
-    DROP TABLE bronze.source_crm.cust_info;
-GO
-
-CREATE TABLE bronze.source_crm.cust_info (
-    cst_id NVARCHAR(500),
-    cst_key NVARCHAR(500),
-    cst_firstname NVARCHAR(500),
-    cst_lastname NVARCHAR(500),
-    cst_marital_status NVARCHAR(500),
-    cst_gndr NVARCHAR(500),
-    cst_create_date NVARCHAR(500)
+--=============================
+ddl for table : bronze.crm_cust_info
+--=============================
+if object_id('bronze.crm_cust_info','U') is not null
+    drop table bronze.crm_cust_info; 
+go
+create table bronze.crm_cust_info ( 
+     cst_id nvarchar(500),
+     cst_key nvarchar(500),
+     cst_firstname nvarchar(500),
+     cst_lastname nvarchar(500),
+     cst_marital_status nvarchar(500),
+     cst_gndr nvarchar(500),
+     cst_create_date nvarchar(500)
 );
-GO
+go
 
--- ==============================================
--- DDL for Table: bronze.source_crm.sales_details
--- ==============================================
-IF OBJECT_ID('bronze.source_crm.sales_details', 'U') IS NOT NULL
-    DROP TABLE bronze.source_crm.sales_details;
-GO
-
-CREATE TABLE bronze.source_crm.sales_details (
-    sls_ord_num NVARCHAR(500),
-    sls_prd_key NVARCHAR(500),
-    sls_cust_id NVARCHAR(500),
-    sls_order_dt NVARCHAR(500),
-    sls_ship_dt NVARCHAR(500),
-    sls_due_dt NVARCHAR(500),
-    sls_sales NVARCHAR(500),
-    sls_quantity NVARCHAR(500),
-    sls_price NVARCHAR(500)
+--=============================
+ddl for table : bronze.crm_sales_details
+--=============================
+if object_id('bronze.crm_sales_details','U') is not null
+    drop table bronze.crm_sales_details; 
+go
+create table bronze.crm_sales_details ( 
+     sls_ord_num nvarchar(500),
+     sls_prd_key nvarchar(500),
+     sls_cust_id nvarchar(500),
+     sls_order_dt nvarchar(500),
+     sls_ship_dt nvarchar(500),
+     sls_due_dt nvarchar(500),
+     sls_sales nvarchar(500),
+     sls_quantity nvarchar(500),
+     sls_price nvarchar(500)
 );
-GO
+go
 
 
 
--- ##############################################################
--- 📂 STARTING SCHEMA: SOURCE_ERP 
--- ##############################################################
-
--- ==============================================
--- DDL for Table: bronze.source_erp.CUST_AZ12
--- ==============================================
-IF OBJECT_ID('bronze.source_erp.CUST_AZ12', 'U') IS NOT NULL
-    DROP TABLE bronze.source_erp.CUST_AZ12;
-GO
-
-CREATE TABLE bronze.source_erp.CUST_AZ12 (
-    CID NVARCHAR(500),
-    BDATE NVARCHAR(500),
-    GEN NVARCHAR(500)
+  -- ################################
+-- starting schema : source_erp
+      -- ################################
+--=============================
+ddl for table : bronze.erp_CUST_AZ12
+--=============================
+if object_id('bronze.erp_CUST_AZ12','U') is not null
+    drop table bronze.erp_CUST_AZ12; 
+go
+create table bronze.erp_CUST_AZ12 ( 
+     CID nvarchar(500),
+     BDATE nvarchar(500),
+     GEN nvarchar(500)
 );
-GO
+go
 
--- ==============================================
--- DDL for Table: bronze.source_erp.LOC_A101
--- ==============================================
-IF OBJECT_ID('bronze.source_erp.LOC_A101', 'U') IS NOT NULL
-    DROP TABLE bronze.source_erp.LOC_A101;
-GO
-
-CREATE TABLE bronze.source_erp.LOC_A101 (
-    CID NVARCHAR(500),
-    CNTRY NVARCHAR(500)
+--=============================
+ddl for table : bronze.erp_LOC_A101
+--=============================
+if object_id('bronze.erp_LOC_A101','U') is not null
+    drop table bronze.erp_LOC_A101; 
+go
+create table bronze.erp_LOC_A101 ( 
+     CID nvarchar(500),
+     CNTRY nvarchar(500)
 );
-GO
+go
 
--- ==============================================
--- DDL for Table: bronze.source_erp.PX_CAT_G1V2
--- ==============================================
-IF OBJECT_ID('bronze.source_erp.PX_CAT_G1V2', 'U') IS NOT NULL
-    DROP TABLE bronze.source_erp.PX_CAT_G1V2;
-GO
-
-CREATE TABLE bronze.source_erp.PX_CAT_G1V2 (
-    ID NVARCHAR(500),
-    CAT NVARCHAR(500),
-    SUBCAT NVARCHAR(500),
-    MAINTENANCE NVARCHAR(500)
+--=============================
+ddl for table : bronze.erp_PX_CAT_G1V2
+--=============================
+if object_id('bronze.erp_PX_CAT_G1V2','U') is not null
+    drop table bronze.erp_PX_CAT_G1V2; 
+go
+create table bronze.erp_PX_CAT_G1V2 ( 
+     ID nvarchar(500),
+     CAT nvarchar(500),
+     SUBCAT nvarchar(500),
+     MAINTENANCE nvarchar(500)
 );
-GO
+go
 
