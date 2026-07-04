@@ -2,7 +2,7 @@
 
 import os
 import pandas as pd
-base_database_path = '/content/drive/MyDrive/datasets'
+base_database_path = ''D:\baraa\all stuff\projects\baraa project\sql-data-warehouse-project-main\datasets'
 
 def generate_dynamic_sql_ddl_silver(base_path) :
   if not os.path.exists(base_path):
