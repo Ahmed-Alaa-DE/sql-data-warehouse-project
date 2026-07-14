@@ -15,8 +15,6 @@
 -- To ensure high-quality data is available
 -- for downstream reporting and analytics.
 -- =============================================
-
-
 USE datawarehouse
 GO
 
@@ -254,7 +252,7 @@ CREATE OR ALTER PROCEDURE silver.load_silver AS
               ,[MAINTENANCE]
               )
 
-               SELECT   replace([ID] , '_' , '-') [ID]
+               SELECT   [ID]
               ,[CAT]
               ,[SUBCAT]
               ,[MAINTENANCE]
